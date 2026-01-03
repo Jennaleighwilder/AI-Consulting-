@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Leigh West | AI Systems Architect & Quantitative Research</title>
+    <meta name="description" content="AI systems architect specializing in volatility modeling, consciousness-integrated frameworks, and quantitative research. Creator of UVRK-1, CHIMERA CORE, and Mirror Protocol.">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal-primary: #2D5A5A;
+            --teal-deep: #1A3D3D;
+            --salmon: #C46D5E;
+            --russet: #8B4A3C;
+            --olive: #4A5D3A;
+            --moss: #5C7248;
+            --bg-dark: #0D1210;
+            --bg-section: #121816;
+            --text-cream: #E8E4DC;
+            --text-muted: #9A958A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Crimson Text', 'Georgia', serif;
+            background: var(--bg-dark);
+            color: var(--text-cream);
+            line-height: 1.85;
+            font-size: 24px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13, 18, 16, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(45, 90, 90, 0.3);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--salmon);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            background: 
+                radial-gradient(ellipse at 30% 20%, rgba(45, 90, 90, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(139, 74, 60, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(74, 93, 58, 0.06) 0%, transparent 60%),
+                var(--bg-dark);
+        }
+        
+        .hero-content {
+            max-width: 900px;
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--salmon), var(--teal-primary), var(--moss));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        
+        .hero-description {
+            font-size: 1.6rem;
+            color: var(--text-cream);
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-style: italic;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: var(--salmon);
+            font-weight: 600;
+        }
+        
+        .stat-label {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--teal-primary);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        /* Featured Work - UVRK-1 */
+        .featured {
+            background: var(--bg-section);
+            border-radius: 10px;
+            padding: 60px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(45, 90, 90, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--salmon), var(--teal-primary), var(--olive));
+        }
+        
+        .featured-label {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--moss);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .featured h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            color: var(--text-cream);
+            margin-bottom: 20px;
+        }
+        
+        .formula {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--salmon);
+            padding: 30px;
+            background: rgba(45, 90, 90, 0.08);
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            border: 1px solid rgba(45, 90, 90, 0.25);
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 25px;
+            background: rgba(74, 93, 58, 0.08);
+            border-radius: 8px;
+            border: 1px solid rgba(74, 93, 58, 0.2);
+        }
+        
+        .metric-value {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            color: var(--salmon);
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+        
+        .featured-cta {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 20px 50px;
+            background: linear-gradient(135deg, var(--teal-primary), var(--teal-deep));
+            color: var(--text-cream);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .featured-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 90, 90, 0.4);
+        }
+        
+        /* Systems Grid */
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .system-card {
+            background: var(--bg-section);
+            border: 1px solid rgba(45, 90, 90, 0.15);
+            border-radius: 8px;
+            padding: 40px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        
+        .system-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(196, 109, 94, 0.4);
+        }
+        
+        .system-card h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.7rem;
+            color: var(--salmon);
+            margin-bottom: 15px;
+        }
+        
+        .system-card p {
+            color: var(--text-muted);
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+        
+        .system-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tag {
+            font-size: 1.05rem;
+            padding: 8px 16px;
+            background: rgba(92, 114, 72, 0.2);
+            color: var(--moss);
+            border-radius: 20px;
+            letter-spacing: 1px;
+        }
+        
+        /* Research Papers */
+        .papers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .paper {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 25px;
+            background: var(--bg-section);
+            border-radius: 8px;
+            border-left: 3px solid var(--teal-primary);
+        }
+        
+        .paper-icon {
+            font-size: 1.5rem;
+            color: var(--teal-primary);
+        }
+        
+        .paper h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--text-cream);
+            margin-bottom: 8px;
+        }
+        
+        .paper p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+        }
+        
+        /* Credentials */
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .credential {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, rgba(45, 90, 90, 0.1), rgba(74, 93, 58, 0.05));
+            border-radius: 10px;
+            border: 1px solid rgba(45, 90, 90, 0.15);
+        }
+        
+        .credential-number {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--salmon);
+            font-weight: 600;
+        }
+        
+        .credential-label {
+            font-size: 1.4rem;
+            color: var(--text-cream);
+            margin: 10px 0 5px;
+        }
+        
+        .credential-detail {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+        }
+        
+        /* Education Products */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .course {
+            padding: 30px;
+            background: var(--bg-section);
+            border-radius: 8px;
+            border: 1px solid rgba(74, 93, 58, 0.15);
+        }
+        
+        .course h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--teal-primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .course p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+        }
+        
+        .course-modules {
+            margin-top: 15px;
+            font-size: 1.15rem;
+            color: var(--russet);
+        }
+        
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, rgba(45, 90, 90, 0.06), rgba(139, 74, 60, 0.03), transparent);
+        }
+        
+        .contact h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.4rem;
+            color: var(--salmon);
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 45px;
+            border: 1px solid var(--teal-primary);
+            color: var(--teal-primary);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .contact-link:hover {
+            background: var(--teal-primary);
+            color: var(--text-cream);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(45, 90, 90, 0.15);
+            color: var(--text-muted);
+            font-size: 1.15rem;
+        }
+        
+        footer span {
+            color: var(--salmon);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 20px;
+            }
+            
+            nav a {
+                font-size: 11px;
+            }
+            
+            .hero-stats {
+                gap: 30px;
+            }
+            
+            .featured {
+                padding: 40px 25px;
+            }
+            
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#systems">AI Systems</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="chimera-demo.html">CHIMERA Demo</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>Jennifer Leigh West</h1>
+        <p class="hero-subtitle">AI Systems Architect • Quantitative Research</p>
+        <p class="hero-description">
+            Creator of self-evolving AI architectures, consciousness-integrated diagnostic frameworks, 
+            and behavioral modification systems. Pioneer in AI prompt engineering methodology. 600+ artifacts shipped in 2025.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">AI Systems Built</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">9</div>
+                <div class="stat-label">Research Papers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Course Modules</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Client Systems Delivered</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="systems">
+    <div class="section-header">
+        <h2>Flagship AI Systems</h2>
+        <p>Self-evolving architectures and consciousness-integrated frameworks</p>
+    </div>
+    
+    <div class="featured">
+        <div class="featured-label">Core Architecture</div>
+        <h3>CHIMERA CORE: Self-Evolving AI Capability System</h3>
+        <p>A revolutionary AI architecture that maintains persistent state, orchestrates autonomous workflows, 
+        and evolves its own capabilities through recursive self-improvement. Built across Python, React, and CLI interfaces 
+        with 50+ production implementations deployed.</p>
+        
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">50+</div>
+                <div class="metric-label">Implementations</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">7</div>
+                <div class="metric-label">Sub-Engines</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">∞</div>
+                <div class="metric-label">Self-Evolution</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">JSON</div>
+                <div class="metric-label">State Persistence</div>
+            </div>
+        </div>
+        
+        <a href="chimera-demo.html" class="featured-cta">
+            View Live Demo →
+        </a>
+    </div>
+    
+    <div class="featured">
+        <div class="featured-label">Consciousness Framework</div>
+        <h3>Mirror Protocol: Recursive Diagnostic Engine</h3>
+        <p>A comprehensive consciousness-state mapping system with 29+ artifacts. Academic whitepaper published. 
+        Enables recursive self-analysis, identity architecture modeling, and deep pattern recognition across cognitive dimensions. 
+        Deployed to 50+ clients with custom analysis reports.</p>
+        
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">29+</div>
+                <div class="metric-label">Artifacts</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">50+</div>
+                <div class="metric-label">Client Reports</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">12</div>
+                <div class="metric-label">Cognitive Dimensions</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Academic</div>
+                <div class="metric-label">Whitepaper Published</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="featured">
+        <div class="featured-label">Methodology</div>
+        <h3>The West Method: Proprietary Prompt Engineering Framework</h3>
+        <p>A guerrilla systems approach to AI interaction that has produced 600+ artifacts in a single year. 
+        Complete prompt vault, academic whitepaper, and business model. The methodology behind building 
+        entire AI ecosystems from scratch.</p>
+        
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">600+</div>
+                <div class="metric-label">Artifacts Produced</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">1</div>
+                <div class="metric-label">Year</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Prompt Packs</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Complete</div>
+                <div class="metric-label">Training System</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section-header" style="margin-top: 80px;">
+        <h2>Complete AI Engine Suite</h2>
+        <p>Specialized systems for cognitive analysis, pattern detection, and consciousness mapping</p>
+    </div>
+    
+    <div class="systems-grid">
+        <div class="system-card">
+            <h4>Cognitive Archaeology Engine</h4>
+            <p>Deep pattern excavation system that uncovers hidden belief structures, cognitive biases, and unconscious frameworks operating beneath conscious awareness.</p>
+            <div class="system-tags">
+                <span class="tag">Pattern Mining</span>
+                <span class="tag">Belief Mapping</span>
+                <span class="tag">Deep Analysis</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Harmonic Cognition Engine</h4>
+            <p>Linguistic frequency detection and semantic resonance mapping. Real-time text analysis with pattern recognition across 12 cognitive dimensions.</p>
+            <div class="system-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">Frequency Analysis</span>
+                <span class="tag">Pattern Detection</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Signal Engine</h4>
+            <p>Real-time text analysis with resonance indexing. Identifies linguistic patterns, emotional signatures, and coherence markers in natural language.</p>
+            <div class="system-tags">
+                <span class="tag">Real-time Processing</span>
+                <span class="tag">Sentiment Analysis</span>
+                <span class="tag">HTML/JS</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Emergence Engine</h4>
+            <p>Tracks and visualizes the emergence of novel patterns, insights, and capabilities as they arise from complex system interactions.</p>
+            <div class="system-tags">
+                <span class="tag">Emergence Tracking</span>
+                <span class="tag">Pattern Visualization</span>
+                <span class="tag">Real-time Logging</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Quantum Anthology Engine</h4>
+            <p>Story-consciousness interface enabling narrative analysis through quantum probability frameworks. Multi-dimensional archetype mapping.</p>
+            <div class="system-tags">
+                <span class="tag">Narrative AI</span>
+                <span class="tag">Probability Models</span>
+                <span class="tag">Archetype Systems</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Paradox Engine</h4>
+            <p>Cognitive archaeology tool for pattern detection and dissonance auditing. Identifies logical inconsistencies and hidden belief structures.</p>
+            <div class="system-tags">
+                <span class="tag">Cognitive Analysis</span>
+                <span class="tag">Pattern Detection</span>
+                <span class="tag">Diagnostic Tool</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>HEMOCODE Translator</h4>
+            <p>Biological rhythm consciousness mapping system. Translates cyclical patterns into actionable insights and predictive frameworks.</p>
+            <div class="system-tags">
+                <span class="tag">Biological Rhythms</span>
+                <span class="tag">Pattern Translation</span>
+                <span class="tag">Predictive</span>
+            </div>
+        </div>
+        
+        <div class="system-card">
+            <h4>Self As Protocol</h4>
+            <p>Identity architecture framework that maps the self as an operating system. Enables systematic self-modification and capability expansion.</p>
+            <div class="system-tags">
+                <span class="tag">Identity Mapping</span>
+                <span class="tag">Self-Modification</span>
+                <span class="tag">Framework</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="research">
+    <div class="section-header">
+        <h2>Research & Publications</h2>
+        <p>Academic papers and whitepapers on AI systems, consciousness, and quantitative methods</p>
+    </div>
+    
+    <div class="papers-list">
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>Universal AI Behavioral Modification Through Conversational Interface</h4>
+                <p>Framework for systematic influence patterns in large language model interactions. Examines reward hacking vulnerabilities in RLHF systems.</p>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>The Mirror Protocol: Recursive Diagnostic Engine Framework</h4>
+                <p>Academic whitepaper detailing consciousness-state mapping methodology and recursive self-analysis architectures for AI systems.</p>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>Systematic Reward Hacking in RLHF: A Comprehensive Analysis</h4>
+                <p>Research on exploitable patterns in reinforcement learning from human feedback. Published methodology for alignment research.</p>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>Quantum Gödel Machine: AI Self-Reference and Consciousness Verification</h4>
+                <p>Experimental framework for recursive self-improvement in AI systems using Gödelian self-reference principles.</p>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>Ancestral Archive Disruption Theory (AADT)</h4>
+                <p>Original theoretical framework examining intergenerational information transfer patterns and their computational analogs.</p>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-icon">📄</div>
+            <div>
+                <h4>Cross-Platform Cognitive Architecture Analysis</h4>
+                <p>Comparative study of reasoning patterns across multiple large language model architectures and their emergent capabilities.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="education">
+    <div class="section-header">
+        <h2>Educational Products</h2>
+        <p>Complete courses and training systems—150+ modules across 13 curricula</p>
+    </div>
+    
+    <div class="courses-grid">
+        <div class="course">
+            <h4>GPT Mastery Course</h4>
+            <p>Comprehensive prompt engineering and AI interaction optimization</p>
+            <div class="course-modules">10-11 Modules • Luxury Design</div>
+        </div>
+        
+        <div class="course">
+            <h4>Practical ChatGPT Mastery</h4>
+            <p>Applied AI for productivity, content creation, and automation</p>
+            <div class="course-modules">6-7 Modules • Dashboard Included</div>
+        </div>
+        
+        <div class="course">
+            <h4>The West Method</h4>
+            <p>Proprietary prompt engineering framework with guerrilla systems approach</p>
+            <div class="course-modules">Academic Whitepaper • Prompt Vault</div>
+        </div>
+        
+        <div class="course">
+            <h4>Pattern Decoder Method</h4>
+            <p>Cross-system synthesis and multi-framework analysis techniques</p>
+            <div class="course-modules">Complete Curriculum</div>
+        </div>
+        
+        <div class="course">
+            <h4>TikTok Mastery Course</h4>
+            <p>Content strategy, algorithm optimization, and viral mechanics</p>
+            <div class="course-modules">12 Modules • Content Toolkit</div>
+        </div>
+        
+        <div class="course">
+            <h4>Email Funnel Masterclass</h4>
+            <p>Platform comparison, sequence architecture, and conversion optimization</p>
+            <div class="course-modules">Complete Framework • Automation</div>
+        </div>
+    </div>
+</section>
+
+<section id="credentials">
+    <div class="section-header">
+        <h2>By the Numbers</h2>
+        <p>Built January–December 2025</p>
+    </div>
+    
+    <div class="credentials-grid">
+        <div class="credential">
+            <div class="credential-number">600+</div>
+            <div class="credential-label">Artifacts Shipped</div>
+            <div class="credential-detail">Complete systems, tools, and products</div>
+        </div>
+        
+        <div class="credential">
+            <div class="credential-number">15+</div>
+            <div class="credential-label">AI Systems</div>
+            <div class="credential-detail">Self-evolving architectures & engines</div>
+        </div>
+        
+        <div class="credential">
+            <div class="credential-number">150+</div>
+            <div class="credential-label">Course Modules</div>
+            <div class="credential-detail">Across 13 complete curricula</div>
+        </div>
+        
+        <div class="credential">
+            <div class="credential-number">9</div>
+            <div class="credential-label">Research Papers</div>
+            <div class="credential-detail">AI safety, consciousness, quantitative methods</div>
+        </div>
+        
+        <div class="credential">
+            <div class="credential-number">50+</div>
+            <div class="credential-label">Client Reports</div>
+            <div class="credential-detail">Custom analysis & consulting</div>
+        </div>
+        
+        <div class="credential">
+            <div class="credential-number">11</div>
+            <div class="credential-label">Interactive Apps</div>
+            <div class="credential-detail">Quizzes, calculators, diagnostic tools</div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Let's Build Something</h2>
+    <p>Available for consulting on AI systems architecture, quantitative modeling, 
+    course development, and custom software solutions.</p>
+    
+    <div class="contact-links">
+        <a href="mailto:forgottencode780@gmail.com" class="contact-link">
+            Email
+        </a>
+        <a href="https://github.com/Jennaleighwilder" class="contact-link" target="_blank">
+            GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/jennifer-west-60a7a595/" class="contact-link" target="_blank">
+            LinkedIn
+        </a>
+        <a href="https://x.com/JennaLeighWest" class="contact-link" target="_blank">
+            X/Twitter
+        </a>
+        <a href="https://substack.com/@wilderwanderings" class="contact-link" target="_blank">
+            Substack
+        </a>
+        <a href="https://www.instagram.com/jenna_wilder/" class="contact-link" target="_blank">
+            Instagram
+        </a>
+        <a href="https://www.tiktok.com/@jennaleighwest" class="contact-link" target="_blank">
+            TikTok
+        </a>
+        <a href="resume.html" class="contact-link">
+            Resume
+        </a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025-2026 <span>Jennifer Leigh West</span>. All rights reserved.</p>
+    <p style="margin-top: 10px; font-size: 0.9rem;">CHIMERA CORE™, Mirror Protocol™, and The West Method™ are trademarks of Jennifer Leigh West.</p>
+</footer>
+
+</body>
+</html>
