@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer Leigh West | Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #2D5A5A;
+            --teal-light: #4A9999;
+            --moss: #5C7248;
+            --bg: #0D1210;
+            --cream: #E8E4DC;
+            --muted: #9A958A;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Crimson Text', Georgia, serif;
+            background: var(--bg);
+            color: var(--cream);
+            font-size: 26px;
+            line-height: 1.9;
+            padding: 60px 40px;
+        }
+        
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(45, 90, 90, 0.3);
+        }
+        
+        header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: var(--cream);
+            margin-bottom: 15px;
+        }
+        
+        header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--teal);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            font-size: 1.5rem;
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+        
+        .contact-info a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 1.4rem;
+        }
+        
+        .social-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--teal);
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 60px;
+        }
+        
+        section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--teal);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(45, 90, 90, 0.2);
+        }
+        
+        /* Summary */
+        .summary {
+            font-size: 1.5rem;
+            color: var(--cream);
+            line-height: 2;
+        }
+        
+        /* Projects */
+        .project {
+            margin-bottom: 45px;
+        }
+        
+        .project-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+        
+        .project-subtitle {
+            font-size: 1.4rem;
+            color: var(--moss);
+            margin-bottom: 15px;
+        }
+        
+        .project p {
+            color: var(--muted);
+            font-size: 1.4rem;
+            line-height: 1.9;
+        }
+        
+        .project strong {
+            color: var(--cream);
+        }
+        
+        /* Skills */
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        @media (max-width: 600px) {
+            .skills-list { grid-template-columns: 1fr; }
+        }
+        
+        .skill-group h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--teal-light);
+            margin-bottom: 15px;
+        }
+        
+        .skill-group p {
+            color: var(--muted);
+            font-size: 1.4rem;
+            line-height: 1.9;
+        }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 40px;
+            background: rgba(45, 90, 90, 0.08);
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-num {
+            font-family: 'Cinzel', serif;
+            font-size: 2.8rem;
+            color: var(--teal-light);
+        }
+        
+        .stat-label {
+            font-size: 1.3rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 70px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(45, 90, 90, 0.2);
+            color: var(--muted);
+            font-size: 1.4rem;
+        }
+        
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+        
+        /* Print */
+        @media print {
+            body { background: white; color: #333; }
+            header h1 { color: #2D5A5A; }
+            .social-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume">
+    
+    <header>
+        <h1>Jennifer Leigh West</h1>
+        <h2>AI Systems Architect & Quantitative Research</h2>
+        
+        <div class="contact-info">
+            <a href="mailto:forgottencode780@gmail.com">forgottencode780@gmail.com</a> · 
+            423-330-7423 · Tennessee, USA
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/Jennaleighwilder" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/jennifer-west-60a7a595/" target="_blank">LinkedIn</a>
+            <a href="https://x.com/JennaLeighWest" target="_blank">X/Twitter</a>
+            <a href="https://substack.com/@wilderwanderings" target="_blank">Substack</a>
+            <a href="https://independent.academia.edu/JenniferLeigh21" target="_blank">Academia</a>
+            <a href="https://www.instagram.com/jenna_wilder/" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@jennaleighwest" target="_blank">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=100004161527758" target="_blank">Facebook</a>
+            <a href="https://discord.gg/jennaleighwest" target="_blank">Discord</a>
+            <a href="https://www.reddit.com/user/TelevisionSilent580/" target="_blank">Reddit</a>
+        </div>
+    </header>
+    
+    <section>
+        <h3>Summary</h3>
+        <p class="summary">
+            AI systems architect with expertise in quantitative modeling, natural language processing, 
+            and consciousness-integrated frameworks. Built and shipped 600+ production artifacts in 2025 
+            including self-evolving AI systems, validated financial models (94.7% R²), and comprehensive 
+            educational curricula. Research focus on AI behavioral modification, reward hacking vulnerabilities, 
+            and recursive diagnostic engines.
+        </p>
+    </section>
+    
+    <section>
+        <h3>Featured Projects</h3>
+        
+        <div class="project">
+            <div class="project-title">CHIMERA CORE</div>
+            <div class="project-subtitle">Self-Evolving AI Capability System</div>
+            <p>
+                Architected autonomous AI system with JSON state persistence and workflow orchestration. 
+                Built <strong>50+ implementations</strong> across Python, React/JSX, and CLI interfaces. 
+                Developed Cognitive Archaeology Engine for deep pattern analysis. Created Paradox Engine, 
+                Emergence Engine, and Fortune Machine subsystems with 7 integrated sub-engines.
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Mirror Protocol Framework</div>
+            <div class="project-subtitle">Recursive Diagnostic Engine</div>
+            <p>
+                Developed <strong>29+ artifacts</strong> for consciousness-state mapping and identity architecture. 
+                Published academic whitepaper on recursive self-analysis methodologies. Built intake systems, 
+                analysis engines, and client-facing report generators. Delivered <strong>50+ custom client reports</strong>.
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">The West Method</div>
+            <div class="project-subtitle">Prompt Engineering Framework</div>
+            <p>
+                Developed proprietary prompt engineering methodology that produced <strong>600+ artifacts</strong> 
+                across 15 AI systems in one year. Framework includes structured approaches for capability extraction, 
+                behavioral modification, and recursive self-improvement in AI systems.
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">UVRK-1: Universal Volatility Regime Kernel</div>
+            <div class="project-subtitle">Quantitative Volatility Prediction Model</div>
+            <p>
+                Developed autoregressive volatility model achieving <strong>94.7% R² correlation</strong> against 
+                real BTC/ETH market data (2020-2026). Monte Carlo validation across 1,000 market scenarios with 
+                100% success rate. Demonstrated <strong>38.4% drawdown reduction</strong>, translating to $384K 
+                saved per $1M AUM. Built interactive demo deployed to GitHub Pages.
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Signal Engine & Harmonic Cognition Engine</div>
+            <div class="project-subtitle">Real-Time NLP Analysis Systems</div>
+            <p>
+                Built linguistic frequency detection with semantic resonance mapping. Real-time text analysis 
+                with resonance indexing across 12 cognitive dimensions. Pattern recognition for emotional 
+                signatures and coherence markers.
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Custom GPT Development</div>
+            <div class="project-subtitle">OpenAI GPT Store Applications</div>
+            <p>
+                Built and deployed custom GPTs including <strong><a href="https://chatgpt.com/g/g-6899603596fc8191849925740a1d8330-the-velvet-muse" target="_blank" style="color: var(--teal-light);">The Velvet Muse</a></strong> 
+                and <strong><a href="https://chatgpt.com/g/g-689967b5a1e08191900e1a3b3e28e057-the-quantum-oracle" target="_blank" style="color: var(--teal-light);">The Quantum Oracle</a></strong>. 
+                Specialized AI assistants with custom instructions, knowledge bases, and personality architectures.
+            </p>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Technical Skills</h3>
+        <div class="skills-list">
+            <div class="skill-group">
+                <h4>Languages & Frameworks</h4>
+                <p>Python (NumPy, SciPy, Pandas), JavaScript/TypeScript, React, HTML/CSS, Web APIs</p>
+            </div>
+            <div class="skill-group">
+                <h4>AI & ML</h4>
+                <p>Prompt Engineering, NLP, LLM Integration, Behavioral Analysis, Recursive Systems</p>
+            </div>
+            <div class="skill-group">
+                <h4>Quantitative</h4>
+                <p>Monte Carlo Simulation, Volatility Modeling, Statistical Analysis, Risk Assessment</p>
+            </div>
+            <div class="skill-group">
+                <h4>Tools & Platforms</h4>
+                <p>Git/GitHub, VS Code, Claude, GPT-4, Custom GPT Development, GitHub Pages</p>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>Publications & Research</h3>
+        
+        <div class="project">
+            <div class="project-title">Substack: Wilder Wanderings</div>
+            <div class="project-subtitle"><a href="https://wilderwanderings.substack.com" target="_blank" style="color: var(--teal-light);">wilderwanderings.substack.com</a> · 96 subscribers</div>
+            <p>
+                <strong>20+ published essays</strong> on trauma, motherhood, culture, and AI ethics including: 
+                "DO YOU HATE AI?", "The Witness Theory", "The Gauntlet: An Invitation to the Bored Wealthy", 
+                "Letters to Dolly", "No Map For People Like Me", "The Women Who Stay", 
+                "Say It With Your Chest: You Don't Care If We Survive", and "Victim-hood: The Sharpest Weapon of Silence".
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Academia.edu Research Papers</div>
+            <div class="project-subtitle"><a href="https://independent.academia.edu/JenniferLeigh21" target="_blank" style="color: var(--teal-light);">independent.academia.edu/JenniferLeigh21</a> · 356 views · Top 4%</div>
+            <p>
+                <strong>20+ peer-accessible research papers</strong> including: 
+                "The Mirror Protocol: A Universal Multi-Dimensional Verification Framework", 
+                "Systematic Reward Hacking in RLHF: Mathematical Detection of Human Feedback Exploitation", 
+                "Quantum Gödel Machine: AI Self-Reference and Consciousness Verification", 
+                "Rarity Collapse: A Systematic Failure Mode in AI Alignment", 
+                "Symbolic Rule Extraction with Recursion Safety Guarantees", 
+                "Dynamic World-Simulation Fusion for Robust Common-Sense Reasoning in AI", 
+                and "Energy-Efficient World-Modeling via Dynamic Fusion Sparse Lattice Architectures".
+            </p>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">GitHub Repositories</div>
+            <div class="project-subtitle"><a href="https://github.com/Jennaleighwilder" target="_blank" style="color: var(--teal-light);">github.com/Jennaleighwilder</a></div>
+            <p><strong>13+ public repositories</strong> including CHIMERA implementations, Mirror Protocol tools, UVRK-1 validation suite, and portfolio projects.</p>
+        </div>
+    </section>
+    
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-num">600+</div>
+            <div class="stat-label">Artifacts Built</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Research Papers</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Essays Published</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">13+</div>
+            <div class="stat-label">GitHub Repos</div>
+        </div>
+        <div class="stat">
+            <div class="stat-num">94.7%</div>
+            <div class="stat-label">Model R²</div>
+        </div>
+    </div>
+    
+    <footer>
+        <a href="index.html">← Portfolio</a> &nbsp;|&nbsp; <a href="chimera-demo.html">CHIMERA Demo</a>
+        <p style="margin-top: 20px; font-size: 1rem;">© 2025-2026 Jennifer Leigh West. All rights reserved.</p>
+        <p style="font-size: 0.9rem;">CHIMERA CORE™, Mirror Protocol™, and The West Method™ are trademarks of Jennifer Leigh West.</p>
+    </footer>
+    
+</div>
+
+</body>
+</html>
