@@ -1,0 +1,37 @@
+{
+  "product": "West-OS",
+  "tag": "v1.0-rc3-hardened",
+  "commit": "57e59f8e",
+  "services_active": 16,
+  "security_scan": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0
+  },
+  "benchmarks": {
+    "golden": {
+      "total": 30,
+      "caught": 30,
+      "accuracy": 1.0,
+      "errors": 0
+    },
+    "benign": {
+      "dataset_size": 1000,
+      "false_positives": 0
+    },
+    "mutation": {
+      "total": 1856,
+      "detected": 1842,
+      "missed": 14,
+      "accuracy_pct": 99.25
+    },
+    "academy_slips": {
+      "total": 10,
+      "caught": 10
+    }
+  },
+  "gauntlet": {
+    "strict": true,
+    "status": "passed"
+  }
+}
